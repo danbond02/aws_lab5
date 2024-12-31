@@ -64,6 +64,10 @@ jobs:
         run: |
           scp branch-files.zip ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/home/ubuntu/
 
+      - name: Install unzip on EC2
+        run: |
+          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "sudo yum install -y unzip"
+
       - name: Extract artifact on EC2
         run: |
           ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "unzip /home/ubuntu/branch-files.zip -d /home/ubuntu/branch-files"
