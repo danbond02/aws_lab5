@@ -9,7 +9,7 @@ cd /home/ubuntu/branch-files
 # Копіювання service-файла в систему
 sudo cp ./lab2-app.service /etc/systemd/system/lab2-app.service
 
-source venv/bin/activate
+source venv/Scripts/activate
 
 # Встановлення Python-залежностей
 pip install -r requirements.txt
