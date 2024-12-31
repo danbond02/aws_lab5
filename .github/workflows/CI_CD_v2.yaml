@@ -31,6 +31,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: branch-files
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
       
       - name: Install AWS CLI
         uses: unfor19/install-aws-cli-action@v1
