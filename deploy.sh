@@ -1,10 +1,7 @@
 #!/bin/bash -ex
 
-# Оновлення системи
-sudo yum update -y
-
 # Установка необхідних залежностей
-sudo yum install -y python3-pip aws-cli
+sudo apt-get install -y python3-pip
 
 # Перехід у папку з файлами (уточніть правильний шлях, якщо необхідно)
 cd /home/ubuntu/branch-files
