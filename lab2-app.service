@@ -3,10 +3,10 @@ Description=Lab2 Application
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/ec2-user/app/main.py
+ExecStart=/usr/bin/python3 /home/ubuntu/app/main.py
 Restart=always
-User=ec2-user
-WorkingDirectory=/home/ec2-user
+User=ubuntu
+WorkingDirectory=/home/ubuntu
 
 [Install]
 WantedBy=multi-user.target
