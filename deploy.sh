@@ -1,16 +1,18 @@
 #!/bin/bash -ex
 
 # Установка необхідних залежностей
-sudo apt-get install -y python3-pip
+sudo apt-get install -y python3-pip python3-venv
 
-# Перехід у папку з файлами (уточніть правильний шлях, якщо необхідно)
+# Перехід у папку з файлами
 cd /home/ubuntu/branch-files
 
 # Копіювання service-файла в систему
 sudo cp ./lab2-app.service /etc/systemd/system/lab2-app.service
 
+source venv/bin/activate
+
 # Встановлення Python-залежностей
-sudo python3 -m pip install -r requirements.txt
+pip install -r requirements.txt
 
 # Перезавантаження конфігурації systemd
 sudo systemctl daemon-reload
