@@ -3,7 +3,7 @@ Description=Lab2 Application
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/ubuntu/app/main.py
+ExecStart=/usr/bin/python3 /home/ubuntu/branch-files/app/main.py
 Restart=always
 User=ubuntu
 WorkingDirectory=/home/ubuntu
