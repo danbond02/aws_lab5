@@ -70,7 +70,7 @@ jobs:
 
       - name: Extract artifact on EC2
         run: |
-          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "unzip /home/ubuntu/branch-files.zip -d /home/ubuntu/branch-files"
+          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "unzip -o /home/ubuntu/branch-files.zip -d /home/ubuntu/branch-files"
 
       - name: Run Bash Script to Deploy App
         run: |
